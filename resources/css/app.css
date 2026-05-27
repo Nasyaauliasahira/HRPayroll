@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@layer components {
+    .btn-action {
+        @apply inline-flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 text-[11px] font-medium leading-none whitespace-nowrap transition-all duration-200 shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-offset-0;
+    }
+
+    .btn-action-primary {
+        @apply inline-flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 text-[11px] font-medium leading-none whitespace-nowrap transition-all duration-200 shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-offset-0 bg-[#1a1a1a] text-white hover:bg-[#111] focus:ring-[#1a1a1a]/20;
+    }
+
+    .btn-action-soft {
+        @apply inline-flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 text-[11px] font-medium leading-none whitespace-nowrap transition-all duration-200 shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-offset-0 bg-[#F5F4F1] border border-[#E8E6E1] text-[#444] hover:bg-[#ECEAE5] focus:ring-[#1a1a1a]/10;
+    }
+
+    .btn-action-link {
+        @apply text-[11px] font-medium text-[#444] underline underline-offset-2 decoration-[#D8D5CE] hover:text-[#1a1a1a] hover:decoration-[#1a1a1a] transition-colors;
+    }
+
+    .btn-action-link-blue {
+        @apply btn-action-link text-[#185FA5] decoration-[#BFD7F0] hover:text-[#144E87] hover:decoration-[#144E87];
+    }
+
+    .btn-action-link-green {
+        @apply btn-action-link text-[#2D8F5E] decoration-[#BEE3CE] hover:text-[#23754C] hover:decoration-[#23754C];
+    }
+
+    .btn-action-link-amber {
+        @apply btn-action-link text-[#D97706] decoration-[#F2D3A4] hover:text-[#B96405] hover:decoration-[#B96405];
+    }
+
+    .btn-action-link-red {
+        @apply btn-action-link text-[#E8433A] decoration-[#F3B8B4] hover:text-[#C7372F] hover:decoration-[#C7372F];
+    }
+}
